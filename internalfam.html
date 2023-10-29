@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Internal Family System</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="internalfam.css">
+    <script defer src="internalfam.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div class="center-line">
+        <a href="#" class="scroll-icon"><i class="fas fa-caret-up"></i></a>
+    </div>
+    <div class="container reveal">
+    <div class="row row-1">
+      <section>
+        <i class="icon fas fa-home"></i>
+        <div class="details">
+          <span class="title">How do you feel now?</span>
+          <span><input type="date" class="date"></span>
+        </div>
+        <p class="intro">Record what happened and caused your emotion.</p>
+        <textarea placeholder="e.g. My baby always cries at night, which frustrates me."required></textarea>
+        <script>
+            const textarea = document.querySelector("textarea");
+            textarea.addEventListener("keyup", e =>{
+              textarea.style.height = "63px";
+              let scHeight = e.target.scrollHeight;
+              textarea.style.height = `${scHeight}px`;
+            });
+          </script>
+        <div class="bottom1"><br></br>
+          <a href="#">Continue</a>
+        </div>
+        </div>
+      </section>
+    </div>
+    <div class="container reveal">
+    <div class="row row-2">
+      <section>
+        <i class="icon fas fa-star"></i>
+        <div class="details">
+          <span class="title">Recall previous experience</span>
+          <span><input type="date" class="date"></span>
+        </div>
+        <p class="intro">Think about your family, childhood, puberty, and background</p>
+        <textarea placeholder="e.g. When I was young, my parents treat me impatiently too."required></textarea>
+        <br></br><div class="bottom1"><br></br>
+          <a href="#">Continue</a>
+        </div>
+        </div>
+      </section>
+    </div>
+    <div class="container reveal">
+        <div class="row row-1">
+          <section>
+            <i class="icon fas fa-home"></i>
+            <div class="details">
+              <span class="title">Recall previous experience</span>
+              <span><input type="date" class="date"></span>
+            </div>
+            <p>Think about what you saw about maternity on social media and how people around you treat maternity</p>
+            <textarea placeholder="e.g. Many people believed that mothers could form special bonds with their babies immediately."required></textarea>
+            <br></br><div class="bottom1"><br></br>
+              <a href="#">Continue</a>
+            </div>
+            </div>
+          </section>
+        </div>
+        <div class="container reveal">
+        <div class="row row-2">
+            <section>
+            <i class="icon fas fa-star"></i>
+            <div class="details">
+              <span class="title">Summary</span>
+              <span><input type="date" class="date"></span>
+            </div>
+            <p>Could you find how so many external factors can affect your mood with baby?</p>
+            <textarea placeholder="e.g. Yes. A little bit inspired!"required></textarea>
+            <br></br><div class="btn"><br></br>
+            <a href="choices.html">So, don't always blame yourself!</a>
+            </div>
+            </div>
+          </section>
+        </div>
+  </div>
+</body>
+</html>

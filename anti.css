@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;500;600;700;800&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body{
+	height: 100vh;
+	font-family: "Raleway", sans-serif;
+	background:antiquewhite;
+}
+
+.container{
+    position: relative;
+	margin: 30px;
+}
+
+.row{
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
+.card{ 
+	background: #ff7979;
+	position: relative;
+	flex: 1;
+	max-width: 460px;
+	height: 300px;
+	margin: 20px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+.card:hover{
+    transform: rotateY(180deg);
+}
+
+.thefront{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background:#ff7979;
+    color:white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.theback{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background:#f1d7d6;
+    color:black;
+    transform: rotateY(180deg);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.back2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background:linear-gradient(45deg, #fddb92,#d1fdff);
+    color:black;
+    transform: rotateY(180deg);
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 25px;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+h1{
+    font-family:'Courier New', Courier, monospace;
+    font-weight: 800;
+    font-size: 27px;
+    display: flex;
+    justify-content: center;
+    color:#E25A53;
+}
+
+.h4{
+    margin: 20px;
+    font-size: 19px;
+    color:#8f3b36;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+textarea{
+    min-height: 150px;
+    min-width: 300px;
+    font-size: 20px;
+    border: 1px solid #8f3b36;
+    padding:10px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.area{
+    min-height: 75px;
+    min-width: 300px;
+}
+
+section{
+    display: grid;
+    place-items: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.diary{
+    width: 100%;
+    height: 100%;
+}
+
+input[type="checkbox"]{
+    height: 25px;
+    width: 25px;
+    cursor: pointer;
+    margin: 6px;
+}
+
+.last{
+    font-size: 23px;
+    margin: 10px;
+    color: #E25A53;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.btn a{
+    text-decoration: none;
+    background: #ff7979;
+    color:#fff;
+    padding: 7px 15px;
+    border-radius: 5px;
+    font-size: 22px;
+    font-weight: 400;
+    transition: all 0.3s ease;
+  }
+.btn a:hover{
+  transform: scale(0.97);
+  background:aquamarine;
+  color: black;
+}
+
+/* Responsive CSS */
+
+@media (max-width: 1080px){
+	.card{
+		flex: 100%;
+		max-width: 480px;
+	}
+}
+
+@media (max-width: 400px){
+	.card .details p{
+		font-size: 16px;
+	}
+
+	.more .read-more, .more .icon-links a i{
+		font-size: 18px;
+	}
+}
